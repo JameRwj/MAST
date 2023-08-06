@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectCreator="Intel Fortran" Keyword="Console Application" Version="11.0" ProjectIdGuid="{8F990052-196B-4AB1-8DBF-8B96198B69F9}">
+	<Platforms>
+		<Platform Name="Win32"/>
+		<Platform Name="x64"/></Platforms>
+	<Configurations>
+		<Configuration Name="Debug|Win32">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" WarnInterfaces="true" Traceback="true" BoundsCheck="true" StackFrameCheck="true" RuntimeLibrary="rtMultiThreadedDebugDLL"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" GenerateDebugInformation="true" SubSystem="subSystemConsole"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration>
+		<Configuration Name="Debug|x64">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" PreprocessorDefinitions="ADD_;HAVE_LAPACK_CONFIG_H;LAPACK_COMPLEX_STRUCTURE;" WarnInterfaces="true" Traceback="true" BoundsCheck="true" StackFrameCheck="true" RuntimeLibrary="rtMultiThreadedDebug" UseWindowsLibs="true" UseMkl="mklParallel"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" AdditionalLibraryDirectories="C:\Users\RENWJ\Desktop\SoftwareX\Matrix Stability analysis" GenerateDebugInformation="true" SubSystem="subSystemConsole"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true" TargetEnvironment="midlTargetAMD64"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration>
+		<Configuration Name="Release|Win32">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" RuntimeLibrary="rtMultiThreadedDLL"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" SubSystem="subSystemConsole"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration>
+		<Configuration Name="Release|x64">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" PreprocessorDefinitions="ADD_;HAVE_LAPACK_CONFIG_H;LAPACK_COMPLEX_STRUCTURE;" RealKIND="realKIND8" RuntimeLibrary="rtMultiThreadedDebug" UseWindowsLibs="true" UseMkl="mklParallel"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" AdditionalLibraryDirectories="C:\Users\RENWJ\Desktop\SoftwareX\Matrix Stability analysis" SubSystem="subSystemConsole"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true" TargetEnvironment="midlTargetAMD64"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration></Configurations>
+	<Files>
+		<Filter Name="Header Files" Filter="fi;fd;h;inc"/>
+		<Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"/>
+		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
+		<Filter Name="0_Variables definition">
+		<File RelativePath=".\0_1_BasicData.f90"/>
+		<File RelativePath=".\0_2_ReadSettings.f90"/>
+		<File RelativePath=".\0_3_InformationWrite.f90"/></Filter>
+		<Filter Name="1_Main">
+		<File RelativePath=".\1_Main Program.f90"/></Filter>
+		<Filter Name="2_Grid reading">
+		<File RelativePath=".\2_ReadGrid.f90"/></Filter>
+		<Filter Name="3_Flow field initialization">
+		<Filter Name="3_2_1DShock">
+		<Filter Name="3_2_4_Temporal Discretization">
+		<File RelativePath=".\3_2_4_1_CalTimeStep.f90"/>
+		<File RelativePath=".\3_2_4_2_MultistageRK.f90"/></Filter>
+		<Filter Name="3_2_5_Variable Conversion">
+		<File RelativePath=".\3_2_5_1_CalConserve.f90"/>
+		<File RelativePath=".\3_2_5_2_Limits.f90"/></Filter>
+		<Filter Name="3_2_6_Spatial Discretization">
+		<File RelativePath=".\3_2_6_1_IterationStep.f90"/>
+		<File RelativePath=".\3_2_6_2_Roe_1D.f90"/>
+		<File RelativePath=".\3_2_6_3_HLLC_1D.f90"/>
+		<File RelativePath=".\3_2_6_4_HLL_1D.f90"/>
+		<File RelativePath=".\3_2_6_5_van Leer.f90"/>
+		<File RelativePath=".\3_2_6_6_AUSM_plus_1D.f90"/>
+		<File RelativePath=".\3_2_6_7_SLAU.f90"/>
+		<File RelativePath=".\3_2_6_8_HLLE.f90"/>
+		<File RelativePath=".\3_2_6_9_HLLEM.f90"/></Filter>
+		<Filter Name="3_2_7_Reconstruction">
+		<File RelativePath=".\3_2_7_0_Reconstruction_L.f90"/>
+		<File RelativePath=".\3_2_7_0_Reconstruction_R.f90"/>
+		<File RelativePath=".\3_2_7_1_MUSCL_L.f90"/>
+		<File RelativePath=".\3_2_7_2_MUSCL_R.f90"/>
+		<File RelativePath=".\3_2_7_3_ROUND_L.f90"/>
+		<File RelativePath=".\3_2_7_4_ROUND_R.f90"/></Filter>
+		<File RelativePath=".\3_2_0_BasicData_1D.f90"/>
+		<File RelativePath=".\3_2_1_1DShock.f90"/>
+		<File RelativePath=".\3_2_2_Initialization_1D.f90"/>
+		<File RelativePath=".\3_2_3_Boundary.f90"/>
+		<File RelativePath=".\3_2_8_Output_1D.f90"/></Filter>
+		<File RelativePath=".\3_1_Initialization.f90"/></Filter>
+		<Filter Name="4_CalculateEigen">
+		<File RelativePath=".\4_1_CalculateEigen.f90"/></Filter>
+		<Filter Name="5_CalGradients">
+		<File RelativePath=".\5_1_Gradientofflux_L.f90"/>
+		<File RelativePath=".\5_1_Gradientofflux_R.f90"/></Filter>
+		<Filter Name="6_Reconstruct">
+		<File RelativePath=".\6_0_Reconstruct_L.f90"/>
+		<File RelativePath=".\6_0_Reconstruct_R.f90"/>
+		<File RelativePath=".\6_1_MUSCL_L.f90"/>
+		<File RelativePath=".\6_4_ROUND_L.f90"/>
+		<File RelativePath=".\6_2_MUSCL_R.f90"/>
+		<File RelativePath=".\6_3_Limiter function.f90"/>
+		<File RelativePath=".\6_5_ROUND_R.f90"/></Filter>
+		<Filter Name="7_CalculateFlux">
+		<File RelativePath=".\7_1_Calculateflux.f90"/>
+		<File RelativePath=".\7_2_Roe.f90"/>
+		<File RelativePath=".\7_3_HLLC.f90"/>
+		<File RelativePath=".\7_4_HLL.f90"/>
+		<File RelativePath=".\7_5_van_Leer.f90"/>
+		<File RelativePath=".\7_6_AUSMplus.f90"/>
+		<File RelativePath=".\7_7_SLAU.f90"/>
+		<File RelativePath=".\7_8_HLLE.f90"/>
+		<File RelativePath=".\7_9_HLLEM.f90"/></Filter>
+		<Filter Name="8_Result output">
+		<File RelativePath=".\8_Output.f90"/></Filter></Filter></Files>
+	<Globals/></VisualStudioProject>
