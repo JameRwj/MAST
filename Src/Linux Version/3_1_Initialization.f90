@@ -194,47 +194,47 @@
 
     END SELECT
 
-    !OPEN(113,FILE="Results/FlowField.plt",FORM="FORMATTED")
-    !WRITE(113,*) "TITLE             = result"
-    !WRITE(113,*) "VARIABLES=   ", "x   ","y   ","rho   ","u   ","v   ","p   "
-    !WRITE(113,*) "ZONE T=","ZONE1"
-    !WRITE(113,*) "STRANDID=0, SOLUTIONTIME=0"
-    !WRITE(113,*) "I= ",id," J= ",jd," K= ",1
-    !WRITE(113,*) "DATAPACKING=BLOCK"
-    !WRITE(113,*) "VARLOCATION=([3-6]=CELLCENTERED)"
+    OPEN(113,FILE="Results_FlowField.plt",FORM="FORMATTED")
+    WRITE(113,*) "TITLE             = result"
+    WRITE(113,*) "VARIABLES=   ", "x   ","y   ","rho   ","u   ","v   ","p   "
+    WRITE(113,*) "ZONE T=","ZONE1"
+    WRITE(113,*) "STRANDID=0, SOLUTIONTIME=0"
+    WRITE(113,*) "I= ",id," J= ",jd," K= ",1
+    WRITE(113,*) "DATAPACKING=BLOCK"
+    WRITE(113,*) "VARLOCATION=([3-6]=CELLCENTERED)"
 
-    !DO j=1,jd
-    !    DO i = 1,id
-    !        WRITE(113,*)x(i,j)
-    !    END DO
-    !END DO
-    !DO j=1,jd
-    !    DO i = 1,id
-    !        WRITE(113,*)y(i,j)
-    !    END DO
-    !END DO
-    !DO j=1,jd-1
-    !    DO i = 1,id-1
-    !        WRITE(113,*)rho(i,j)
-    !    END DO
-    !END DO
-    !DO j=1,jd-1
-    !    DO i = 1,id-1
-    !        WRITE(113,*)u(i,j)
-    !    END DO
-    !END DO
-    !DO j=1,jd-1
-    !    DO i = 1,id-1
-    !        WRITE(113,*)v(i,j)
-    !    END DO
-    !END DO
-    !DO j=1,jd-1
-    !    DO i = 1,id-1
-    !        WRITE(113,*)p(i,j)
-    !    END DO
-    !END DO
-    !
-    !CLOSE(113)
+    DO j=1,jd
+        DO i = 1,id
+            WRITE(113,*)x(i,j)
+        END DO
+    END DO
+    DO j=1,jd
+        DO i = 1,id
+            WRITE(113,*)y(i,j)
+        END DO
+    END DO
+    DO j=1,jd-1
+        DO i = 1,id-1
+            WRITE(113,*)rho(i,j)
+        END DO
+    END DO
+    DO j=1,jd-1
+        DO i = 1,id-1
+            WRITE(113,*)u(i,j)
+        END DO
+    END DO
+    DO j=1,jd-1
+        DO i = 1,id-1
+            WRITE(113,*)v(i,j)
+        END DO
+    END DO
+    DO j=1,jd-1
+        DO i = 1,id-1
+            WRITE(113,*)p(i,j)
+        END DO
+    END DO
+    
+    CLOSE(113)
 
     
     END SUBROUTINE Initialization
